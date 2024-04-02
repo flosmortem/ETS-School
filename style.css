@@ -1,0 +1,183 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{  
+     background: linear-gradient(#31190A, #130903);
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+/* HEADER */
+header{
+    background-color: white;
+    display: block;
+    left: 0;
+    position: sticky;
+    right: 0;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.header-inner{
+    width: 1280px;
+    display: flex;
+    
+}
+
+.logo{
+    width: 140px;
+    height: 40px;
+}
+
+.header-block{
+    width: 894px;
+    display: flex;
+}
+
+.header-nav{
+    width: 602px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-nav-button{
+    width: 87px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.header-nav-button:hover{
+    color: #FF8514;
+    transition: .2s ease-in-out ;
+}
+
+
+.header-buttons{
+    width: 252px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-language{
+    width: 112px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFE3CA;
+    color: #FF8514;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.header-consultation{
+    width: 128px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FF8514;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* BODY */
+
+.block-1{
+    width: 1440px;
+    height: 790px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/FirstBlock.png);
+
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+
+.b1-chapter1{
+    width: 710px;
+    height: 264px;
+    display: flex;
+    flex-direction: column;
+}
+
+.b1-text1{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 44px;
+}
+
+.b1-text2{
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.b1-buttons{
+    width: 286px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.b1-consultation{
+    width: 128px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FF8514;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.b1-button2{
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+}
+
+/* FOOTER */
