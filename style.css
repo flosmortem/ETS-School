@@ -14,8 +14,7 @@ a{
 }
 
 body{  
-     background: linear-gradient(#31190A, #130903);
-     background-repeat: no-repeat;
+     background: linear-gradient(to bottom, rgb(49, 25, 10), rgb(19, 9, 3));
      background-position: center;
 }
 
@@ -37,43 +36,155 @@ header{
 .header-inner{
     width: 1280px;
     display: flex;
-    
+    justify-content: space-between;
 }
 
 .logo{
     width: 140px;
     height: 40px;
+    margin: 0px;
 }
 
 .header-block{
     width: 894px;
+    height: 40px;
     display: flex;
+    margin: 0px;
 }
 
+/* NAVIGATION */
 .header-nav{
     width: 602px;
     display: flex;
     justify-content: space-between;
 }
 
-.header-nav-button{
+.header-nav-button-2::after{
+    content: '';
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent solid black;
+    border-right: 5px solid transparent solid;
+    border-top: 10px rgba(0, 0, 0, 0);
+}
+
+.font{
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: #1F160E;
+
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 0px;
+}
+
+.header-nav-button-1{
     width: 87px;
+    height: 40px;
+
+    color: #FF8514;
+}
+.header-nav-button-2{
+    width: 110px;
+    height: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+.header-nav-button-2 svg{
+    margin: 0px;
+}
+.header-nav-button-3{
+    width: 115px;
+    height: 40px;
+}
+.header-nav-button-4{
+    width: 70px;
+    height: 40px;
+}
+.header-nav-button-5{
+    width: 64px;
+    height: 40px;
+}
+.header-nav-button-6{
+    width: 96px;
+    height: 40px;
+}
 
-    color: black;
+.header-nav-courses-dropdown{
+    width: 172px;
+    height: 120px;
+    position: absolute;
+    display: none;
+    z-index: 4;
+    flex-direction: column;
+    margin: 30px 0px 0px 110px;
+}
+
+.header-nav-courses-dropdown:hover {
+    display: flex;
+}
+
+.header-nav-button-2:hover + .header-nav-courses-dropdown {
+    display: flex;
+}
+
+.header-course-driver{
+    width: 172px;
+    height: 40px;
+    background-color: #FFE3CA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-family: "Manrope", sans-serif;
     font-weight: 500;
-    font-style: normal;
     font-size: 14px;
-}
-
-.header-nav-button:hover{
+    line-height: 171%;
+    text-align: center;
     color: #FF8514;
-    transition: .2s ease-in-out ;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.header-course-owner{
+    width: 172px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: black;
+}
+.header-course-investor{
+    width: 172px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: black;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
+
+/* GENERAL BUTTONS */
 
 .header-buttons{
     width: 252px;
@@ -83,11 +194,13 @@ header{
 }
 
 .header-language{
+    border-radius: 4px;
+    padding: 8px;
     width: 112px;
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin: 0px;
 
     background-color: #FFE3CA;
     color: #FF8514;
@@ -96,6 +209,74 @@ header{
     font-style: normal;
     font-size: 14px;
     border-radius: 4px;
+}
+
+.header-language-dropdown{
+    width: 172px;
+    height: 120px;
+    position: absolute;
+    display: none;
+    z-index: 4;
+    flex-direction: column;
+    margin: 160px 0px 0px 0px;
+}
+.header-language-Russian{
+    width: 172px;
+    height: 40px;
+    background-color: #FFE3CA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: #FF8514;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.header-language-English{
+    width: 172px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: black;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.header-language-dropdown:hover {
+    display: flex;
+}
+
+.header-language:hover + .header-language-dropdown {
+    display: flex;
+}
+
+.header-language-svg1{
+    margin: 0px 8px 0px 0px;
+}
+.header-language-svg2{
+    margin: 0px 0px 0px 16px;
+}
+
+.header-language .header-arrow-img{
+    margin: 0px 0px 0px 23px;
+}
+
+.header-planet-image{
+    width: 16px;
+    height: 16px;
+    margin: 0px 8px 0px 8px;
 }
 
 .header-consultation{
@@ -116,16 +297,20 @@ header{
 
 /* BODY */
 
-.block-1{
+/* BLOCK-1 */
+
+ .block-1{
     width: 1440px;
     height: 790px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/FirstBlock.png);
-
+    background-image: url(img/FirstBlock.svg);
     background-repeat: no-repeat;
     background-position: right;
     display: flex;
     align-items: center;
     justify-content: left;
+
+    position: relative;
+    z-index: 0;
 }
 
 .b1-chapter1{
@@ -135,6 +320,7 @@ header{
     flex-direction: column;
     margin: 0px 0px 0px 80px; 
     justify-content: space-between;
+    z-index: 3;
 }
 
 .b1-title{
@@ -184,6 +370,7 @@ header{
     font-style: normal;
     font-size: 14px;
     border-radius: 4px;
+    margin: 0px;
 }
 
 .b1-button2{
@@ -193,5 +380,1014 @@ header{
     font-style: normal;
     font-size: 14px;
 }
+
+/* BLOCK-2 */
+
+.block-2-chapter1{
+    width: 1280px;
+    height: 804px;
+    margin: -83px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.b2-chp1-courses{
+    width: 1280px;
+    height: 350px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* B2-CHAPTER1-COURSE1 */
+
+.b2-chp1-course1{
+    width: 534px;
+    height: 350px;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+.b2-chp1-course1-title{
+    width: 454px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chp1-course1-text1{
+    color: #1F160E;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 125%;
+    margin: 0px;
+}
+.chp1-course1-text2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 133%;
+    color:white;
+
+    background-color: #36C36E;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 108px;
+    height: 32px;
+    margin: 0px;
+}
+
+.chp1-course1-line{
+    border-radius: 2px;
+    width: 120px;
+    height: 2px;
+    background: #FF8514;
+    margin: 0px;
+    border: none;
+}
+
+.b2-chp1-course1-description{
+    margin: 0px;
+}
+.chp1-course1-text3{
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    
+}
+.b2-chp1-course1-information{
+    width: 418px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+}
+.chp1-course1-h{
+    width: 104px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+.chp1-course1-hm{
+    width: 123px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+.chp1-course1-hml{
+    width: 111px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+.chp1-course1-text4{
+    font-family: "Roboto";
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 118%;
+    color: #1F160E;
+}
+.chp1-course1-text5{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #1F160E;
+}
+
+/* B2-CHAPTER1-COURSE2 */
+
+.b2-chp1-course2{
+    border-radius: 20px;
+    padding: 40px;
+    width: 345px;
+    height: 350px;
+    background: radial-gradient(circle at center bottom, rgba(168, 105, 68, 0.2) 0%, rgba(168, 105, 68, 0) 100%), rgba(255, 255, 255, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+}
+.b2-chp1-course2-information{
+    width: 265px;
+    height: 178px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chp1-course2-text1{
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 125%;
+    color: white;
+    margin: 0px;
+}
+.chp1-course2-line{
+    border-radius: 2px;
+    width: 120px;
+    height: 2px;
+    background: #FF8514;
+    margin: 0px;
+    border: none;
+}
+.chp1-course2-text2{
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: white;
+    margin: 0px;
+}
+.b2-chp1-course2-button{
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    color: #FF8514;
+    margin: 0px;
+}
+/* B2-CHAPTER1-COURSE3 */
+
+.b2-chp1-course3{
+    border-radius: 20px;
+    padding: 40px;
+    width: 345px;
+    height: 350px;
+    background: radial-gradient(circle at center bottom, rgba(168, 105, 68, 0.2) 0%, rgba(168, 105, 68, 0) 100%), rgba(255, 255, 255, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+}
+.b2-chp1-course3-information{
+    width: 265px;
+    height: 178px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chp1-course3-text1{
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 125%;
+    color: white;
+    margin: 0px;
+}
+.chp1-course3-line{
+    border-radius: 2px;
+    width: 120px;
+    height: 2px;
+    background: #FF8514;
+    margin: 0px;
+    border: none;
+}
+.chp1-course3-text2{
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: white;
+    margin: 0px;
+}
+.b2-chp1-course3-button{
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    color: #FF8514;
+    margin: 0px;
+}
+
+/* B2-CHAPTER2-COURSES-INFORMATION */
+.b2-chp2-courses-information{
+    width: 1280px;
+    height: 426px;
+    display: flex;
+    margin: 0px;
+
+    border: 1px solid #FF8514;
+    border-radius: 20px;
+    padding: 40px;
+}
+.b2-chp2-crs-info-image{
+    width: 280px;
+    height: 346px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: relative;
+}
+.b2-chp2-crs-info-image img {
+    position: absolute;
+    z-index: 1;
+}
+.b2-chp2-crs-info-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(42, 22, 8, 0.2);
+    z-index: 2;
+}
+.b2-chp2-crs-info-image-container{
+    width: 128px;
+    height: 96px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.b2-chp2-crs-info-image-container-content{
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: white;
+}
+.b2-chp2-crs-info-texts{
+    width: 880px;
+    height: 346px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* b2-chp2-crs-info-section1 */
+
+.b2-chp2-crs-info-section1{
+    width: 880px;
+    height: 130px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.b2-chp2-crs-info-sct1-title{
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 125%;
+    color: white;
+    margin: 0px;
+}
+.b2-chp2-crs-info-sct1-line{
+    border-radius: 2px;
+    width: 120px;
+    height: 2px;
+    background: #FF8514;
+    margin: 0px;
+    border: none;
+}
+.b2-chp2-crs-info-sct1-text{
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: white;
+    margin: 0px;
+}
+
+/* b2-chp2-crs-info-section2 */
+
+.b2-chp2-crs-info-texts-section2{
+    width: 490px;
+    height: 84px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+.b2-chp2-crs-info-texts-sct2-img{
+    margin: 0px;
+}
+
+.b2-chp2-crs-info-texts-sct2-text{
+    display: flex;
+    margin: 0px;
+}
+.b2-chp2-crs-info-texts-sct2-content{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: white;
+
+    text-align: center;
+    padding: 0px 0px 0px 8px;
+    margin: 0px;
+}
+
+/* b2-chp2-crs-info-section3 */
+
+.b2-chp2-crs-info-section3{
+    width: 482px;
+    height: 52px;
+
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+.b2-chp2-crs-info-sct3-h{
+    width: 104px;
+    height: 52px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+.b2-chp2-crs-info-sct3-hm{
+    width: 123px;
+    height: 52px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+.b2-chp2-crs-info-sct3-hml{
+    width: 111px;
+    height: 52px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+.b2-chp2-crs-info-texts-sct3-content1{
+    font-family: "Roboto";
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 118%;
+    color: white;
+    margin: 0px;
+}
+.b2-chp2-crs-info-texts-sct3-content2{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: white;
+    margin: 0px;
+}
+
+/* BLOCK-3 */
+
+.block-3{
+    width: 1280px;
+    height: 733px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 163px auto 0px auto;
+}
+
+/* b3-chapter1 */
+
+.b3-chapter1{
+    width: 678px;
+    height: 112px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.b3-chp1-title{
+    font-family: "Roboto";
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 122%;
+    text-align: center;
+    color: white;
+
+    text-shadow: 4px 0 12px 0 rgba(95, 54, 16, 0.2);
+}
+.b3-chp1-text{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: white;
+}
+
+/* b3-chapter2 */
+
+.b3-chapter2{
+    width: 1280px;
+    height: 112px;
+
+    display: flex;
+}
+.b3-chp2-section1{
+    width: 373px;
+    height: 112px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.b3-chp2-section2{
+    width: 373px;
+    height: 112px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.b3-chp2-section3{
+    width: 373px;
+    height: 112px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b3-chp2-number{
+    font-family: "Roboto";
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 118%;
+    color: white;
+}
+.b3-chp2-amount{
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: white;
+}
+.b3-chp2-description{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: White;
+}
+
+/* b3-chapter3 */
+
+.b3-chapter3{
+    width: 1280px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.b3-chp3-text{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: White;
+}
+.b3-chp3-button{
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 128px;
+    height: 40px;
+
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: White;    
+
+    background: #FF8514;
+}
+
+/* IMG BACKGROUND BLOCK 3-4 */
+
+.backgroundblock3-4{
+    width: 1280px;
+    height: 753px;
+    
+    display: block;
+    position: absolute;
+    top: 1830px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+/* BLOCK-4 */
+
+.block-4{
+    border-radius: 20px;
+    padding: 40px;
+    width: 1280px;
+    height: 598px;
+    background: white;
+    position: relative;
+    z-index: 3;
+    margin: 80px auto 0px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* b4-chapter1 */
+.b4-chapter1{
+    width: 1200px;
+    height: 122px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.b4-chp1-title{
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 125%;
+    text-align: center;
+    color: #1F160E;
+}
+.b4-chp1-line{
+    border-radius: 2px;
+    width: 120px;
+    height: 2px;
+    background: #FF8514;
+    border: none;
+}
+.b4-chp1-text{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: #1F160E;
+}
+
+/* b4-chapter2 */
+
+.b4-chapter2{
+    width: 1200px;
+    height: 248px;
+    display: flex;
+}
+
+/* b4-chp2-section1 */
+
+.b4-chp2-section1{
+    width: 412px;
+    height: 248px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.b4-chp2-sct1-img1{
+    border-radius: 12px;
+    width: 200px;
+    height: 248px;
+
+    transition: all 0.3s ease-in-out;
+}
+.b4-chp2-sct1-img1:hover{
+    transform: scale(1.04) rotate(4deg);
+}
+.b4-chp2-sct1-pack1{
+    width: 200px;
+    height: 248px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.b4-chp2-sct1-img2{
+    border-radius: 12px;
+    width: 200px;
+    height: 140px;
+
+    transition: all 0.3s ease-in-out;
+}
+.b4-chp2-sct1-img2:hover{
+    transform: scale(1.04) rotate(4deg);
+}
+.b4-chp2-sct1-pack2{
+    width: 200px;
+    height: 96px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.b4-chp2-sct1-img3{
+    border-radius: 12px;
+    width: 94px;
+    height: 96px;
+
+    transition: all 0.3s ease-in-out;
+}
+.b4-chp2-sct1-img3:hover{
+    transform: scale(1.04) rotate(4deg);
+}
+.b4-chp2-sct1-img4{
+    border-radius: 12px;
+    width: 94px;
+    height: 96px;
+
+    transition: all 0.3s ease-in-out;
+}
+.b4-chp2-sct1-img4:hover{
+    transform: scale(1.04) rotate(4deg);
+}
+
+/* b4-chp2-section2 */
+
+.b4-chp2-section2{
+    width: 764px;
+    height: 236px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+}
+.b4-chp2-sct2-title{
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1F160E;
+    margin: 0px;
+}
+.b4-chp2-sct2-info{
+    width: 764px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+}
+.b4-chp2-sct2-text{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #1F160E;
+    margin: 0px;
+}
+
+/* b4-chapter3 */
+
+.b4-chapter3{
+    width: 1200px;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+}
+.b4-chp3-section{
+    border-radius: 12px;
+    padding: 8px 16px;
+    width: 380px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(90deg, rgba(255, 133, 20, 0.1) 0%, transparent 100%);
+
+}
+.b4-chp3-section-text1{
+    font-family: "Roboto";
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 118%;
+    text-align: right;
+    color: #FF8514;
+    margin: 0px;
+    padding: 0px 12px 0px 0px;
+}
+.b4-chp3-section-text2{
+    width: 188px;
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #1F160E;
+    margin: 0px;
+}
+
+/* BLOCK-5 */
+
+.block-5{
+    width: 1280px;
+    height: 120px;
+
+    display: flex;
+    justify-content: space-between;
+    margin: 80px auto 0px auto;
+
+}
+.b5-chapter{
+    border-radius: 12px;
+    padding: 12px;
+    width: 408px;
+    height: 120px;
+    border: none;
+
+    display: flex;
+
+    background: radial-gradient(ellipse at center bottom, rgba(168, 105, 68, 0.3), transparent);
+}
+.b5-chp-content{
+    width: 296px;
+    height: 96px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+}
+.b5-chapter img{
+    width: 68px;
+    height: 68px;
+    margin: 0px 20px 0px 0px;
+}
+.b5-chp-content-title{
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: white;
+    margin: 0px;
+}
+.b5-chp-content-text{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: white;
+    margin: 0px;
+}
+
+/* BLOCK-6 */
+
+.block-6{
+    width: 1280px;
+    height: 594px;
+    
+    display: flex;
+    flex-direction: column;
+    margin: 80px auto 0px auto;
+}
+
+/* b6-chapter1 */
+.b6-chapter1{
+    width: 1280px;
+    height: 122px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.b6-chp1-title{
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 125%;
+    text-align: center;
+    color: white;
+}
+.b6-chp1-line{
+    border-radius: 2px;
+    width: 120px;
+    height: 2px;
+    border: none;
+
+    background: #FF8514;
+}
+.b6-chp1-info{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: white;
+}
+
+/* b6-chapter2 */
+
+.b6-chapter2{
+    width: 1280px;
+    height: 452px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0px 0px 0px;
+}
+.b6-chp2-controls{
+    width: 404px;
+    height: 40px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.b6-chp2-controls-driver{
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: white;
+    margin: 0px;
+
+    display: flex;
+    align-items: center;
+    
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 135px;
+    height: 40px;
+
+    background: #FF8514;
+}
+.b6-chp2-controls-owner{
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: white;
+    margin: 0px;
+
+    display: flex;
+    align-items: center;
+}
+.b6-chp2-controls-invest{
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: white;
+    margin: 0px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* b6-chp2-container */
+
+.b6-chp2-swiper{
+    width: 1280px;
+    height: 372px;
+    display: flex;
+}
+.b6-chp2-swiper-wrapper{
+    display: flex;
+    box-sizing: content-box;
+
+    position: relative;
+}
+.b6-chp2-swiper-slide{
+    width: 700px;
+    height: 372px;
+    display: flex;
+    align-items: center;
+
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
+    background-size: contain;
+}
+.b6-chp2-img{
+    width: 700px;
+    height: 372px;
+}
+.b6-chp2-swiper-slide-1{
+    left: 15%;
+    opacity: 0.4;
+    transform: translateX(-50%);
+}
+.b6-chp2-swiper-slide-2{
+    width: 700px;
+    height: 372px;
+    display: flex;
+    align-items: center;
+}
+.b6-chp2-swiper-slide-3{
+    width: 700px;
+    height: 372px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* b6-chp2-content */
+
+/* .b6-chp2-sct-content-title{
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 125%;
+    text-align: center;
+    color: white;
+}
+.b6-chp2-sct-content-line{
+    border-radius: 2px;
+    width: 120px;
+    height: 2px;
+    border: 0px;
+
+    background: #FF8514;
+}
+.b6-chp2-sct-content-info{
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: white;
+}
+.b6-chp2-sct-content-buttons{}
+.b6-chp2-sct-content-button1{}
+.b6-chp2-sct-content-button2{} */
 
 /* FOOTER */
